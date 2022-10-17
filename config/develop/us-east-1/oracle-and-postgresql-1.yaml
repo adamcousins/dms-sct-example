@@ -1,0 +1,5 @@
+template:
+  path: cloudformation.yaml
+
+parameters:
+  TestDMSAssumeRoleArn: {{ stack_group_config.role_to_test_dms }}
