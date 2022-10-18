@@ -398,8 +398,6 @@ Resources:
         Ref: OracleDBName
       AllocatedStorage:
         Ref: OracleDBStorage
-      MasterUsername:
-        Ref: AuroraDBUsername
       MasterUserPassword:
         Ref: OracleDBPassword
       DBInstanceClass:
@@ -439,7 +437,7 @@ Resources:
       Description: OracleRDS
       SecretString: !Sub |
         {
-        "username": "${AuroraDBUsername}",
+        "username": "dbadmin",
         "password": "${OracleDBPassword}",
         "port": "${OracleDB.Endpoint.Port}",
         "host": "${OracleDB.Endpoint.Address}"
